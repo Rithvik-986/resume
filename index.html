@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Rithvik – Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0f0f13;--surface:#18181f;--bar:#13131a;
+  --border:#2a2a35;--accent:#7c6aff;--accent2:#a78bfa;
+  --text:#e8e8f0;--muted:#888899;
+}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column;align-items:center}
+header{width:100%;padding:60px 24px 40px;display:flex;flex-direction:column;align-items:center;gap:10px;position:relative;overflow:hidden}
+header::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:600px;height:320px;background:radial-gradient(ellipse,rgba(124,106,255,.18) 0%,transparent 70%);pointer-events:none}
+.avatar{width:74px;height:74px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:700;color:#fff;box-shadow:0 0 0 3px rgba(124,106,255,.25)}
+h1{font-size:clamp(1.8rem,5vw,2.6rem);font-weight:700;letter-spacing:-.5px;background:linear-gradient(135deg,#fff 40%,var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.tagline{font-size:.95rem;color:var(--muted)}
+.actions{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:10px;font-size:.9rem;font-weight:500;cursor:pointer;text-decoration:none;transition:transform .15s,opacity .15s;border:none;font-family:'Inter',sans-serif}
+.btn:hover{transform:translateY(-2px);opacity:.9}
+.btn:active{transform:translateY(0)}
+.btn-primary{background:linear-gradient(135deg,var(--accent),#9f8fff);color:#fff;box-shadow:0 4px 20px rgba(124,106,255,.35)}
+.btn-secondary{background:var(--surface);color:var(--text);border:1px solid var(--border)}
+.btn svg{width:16px;height:16px;flex-shrink:0}
+.divider{width:min(880px,92%);height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:4px 0 28px}
+.viewer-wrap{width:min(880px,94%);background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 8px 48px rgba(0,0,0,.55);margin-bottom:48px}
+.viewer-bar{padding:12px 18px;background:var(--bar);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:7px}
+.dot{width:10px;height:10px;border-radius:50%}
+.dot-r{background:#ff5f57}.dot-y{background:#ffbd2e}.dot-g{background:#28c840}
+.viewer-label{margin-left:8px;font-size:.76rem;color:var(--muted);letter-spacing:.4px}
+iframe{width:100%;height:88vh;border:none;display:block;background:#fff}
+footer{padding:22px;font-size:.76rem;color:var(--muted);text-align:center}
+@media(max-width:480px){header{padding:40px 16px 28px}iframe{height:76vh}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="avatar">R</div>
+  <h1>Rithvik</h1>
+  <p class="tagline">Resume &amp; Portfolio</p>
+  <div class="actions">
+
+    <a class="btn btn-primary"
+       href="https://drive.google.com/uc?export=download&id=1dVstPdKWywycvbSpIICkloPQHN_7_KcY"
+       download="Rithvik_Resume.pdf">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+      Download Resume
+    </a>
+
+    <a class="btn btn-secondary"
+       href="mailto:e.rithvik986@zohomail.in?subject=Opportunity%20for%20Rithvik&body=Hi%20Rithvik%2C%0A%0AI%20came%20across%20your%20resume%20and%20would%20love%20to%20connect.%0A%0ARegards%2C">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+        <polyline points="22,6 12,13 2,6"/>
+      </svg>
+      Send Mail
+    </a>
+
+  </div>
+</header>
+
+<div class="divider"></div>
+
+<div class="viewer-wrap">
+  <div class="viewer-bar">
+    <div class="dot dot-r"></div>
+    <div class="dot dot-y"></div>
+    <div class="dot dot-g"></div>
+    <span class="viewer-label">Rithvik_Resume.pdf</span>
+  </div>
+  <iframe
+    src="https://drive.google.com/file/d/1dVstPdKWywycvbSpIICkloPQHN_7_KcY/preview"
+    allow="autoplay"
+    title="Rithvik Resume PDF">
+  </iframe>
+</div>
+
+<footer>© 2026 Rithvik &nbsp;·&nbsp; e.rithvik986@zohomail.in</footer>
+
+</body>
+</html>
